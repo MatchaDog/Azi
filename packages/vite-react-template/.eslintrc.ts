@@ -8,7 +8,6 @@ module.exports = {
     plugins: [
         "react",
         "jsx-a11y",
-        "import",
         "unused-imports",
         "@typescript-eslint",
         "react-hooks",
@@ -16,7 +15,6 @@ module.exports = {
     extends: [
         "airbnb",
         "airbnb/hooks",
-        "plugin:import/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "prettier",
@@ -30,42 +28,6 @@ module.exports = {
         project: "./tsconfig.json",
         tsconfigRootDir: __dirname,
     },
-    overrides: [
-        {
-            files: ["src/**/*.{ts,tsx}"],
-            rules: {
-                "import/order": [
-                    "error",
-                    {
-                        groups: [
-                            "builtin",
-                            "external",
-                            "internal",
-                            ["parent", "sibling"],
-                            "index",
-                            "object",
-                            "type",
-                        ],
-                        pathGroups: [
-                            {
-                                pattern: "./**/**\\.css",
-                                group: "type",
-                                position: "after",
-                            },
-                        ],
-                        pathGroupsExcludedImportTypes: ["builtin"],
-                        alphabetize: {
-                            order: "asc",
-                            caseInsensitive: true,
-                        },
-                        "newlines-between": "always",
-                        warnOnUnassignedImports: true,
-                    },
-                ],
-            },
-            "@typescript-eslint/explicit-member-accessibility": ["error"],
-        },
-    ],
     rules: {
         "jsx-a11y/click-events-have-key-events": "warn",
         "jsx-a11y/label-has-associated-control": "warn",
