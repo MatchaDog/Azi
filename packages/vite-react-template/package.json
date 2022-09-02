@@ -24,7 +24,11 @@
         "fix:prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,less,scss}' --no-error-on-unmatched-pattern",
         "prepare": "husky install",
         "coverage": "type-coverage",
-        "ts-coverage": "typescript-coverage-report"
+        "ts-coverage": "typescript-coverage-report",
+        "commit": "cz",
+        "release:major": "standard-version -- --release-as major",
+        "release:minor": "standard-version -- --release-as minor",
+        "release:patch": "standard-version -- --release-as patch"
     },
     "bugs": {
         "url": "https://github.com/MatchaDog/Azi/issues"
@@ -50,6 +54,7 @@
         "@typescript-eslint/parser": "^5.32.0",
         "@vitejs/plugin-react": "^2.0.0",
         "autoprefixer": "^10.4.8",
+        "commitizen": "^4.2.5",
         "eslint": "^8.21.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
@@ -66,6 +71,7 @@
         "prettier": "^2.7.1",
         "prettier-plugin-style-order": "^0.2.2",
         "prettier-plugin-tailwindcss": "^0.1.13",
+        "standard-version": "^9.5.0",
         "tailwindcss": "^3.1.8",
         "type-coverage": "^2.22.0",
         "typescript": "^4.7.4",
